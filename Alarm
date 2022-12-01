@@ -1,0 +1,39 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+string layout="";
+cin>>layout ;
+char* chars=&layout[0];
+int i=0;
+int G,T,S;
+while (*chars!=NULL){
+    switch (*chars){
+        case 'G':
+        G=i;
+        break ;
+        case 'T':
+        T=i;
+        break ;
+        case '$':
+        S=i;
+        break ;
+        
+        
+    }
+    i++;
+    chars++;
+}
+
+//cout<<G<<T<<S;
+if((G>S&&G>T)||(S>G&&G<T)){
+    cout<<"ALARM";
+}
+else {
+    cout<<"quiet";
+}
+    return 0;
+}
+
